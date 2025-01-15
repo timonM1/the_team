@@ -1,0 +1,84 @@
+/* ===== Estilos Globales ===== */
+body {
+  font-family: "Poppins", serif;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+/* ===== Estilos de Navegación ===== */
+.nav-link {
+  font-weight: 500;
+}
+
+.list-navegation {
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 120px);
+  padding: 0 20px;
+}
+
+/* ===== Barra de navegación lateral ===== */
+#list-example ul li a {
+  font-size: 0.85rem;
+}
+
+/* ===== Estilos del Carrusel ===== */
+.carousel {
+  margin-top: 70px;
+}
+
+.carousel-caption {
+  background: radial-gradient(circle, #cfe2ff 50%, #cfe2ff18 100%);
+}
+
+/* ===== Estilos de las Secciones ===== */
+#best-teams,
+#others-teams,
+#main-team {
+  scroll-margin-top: 80px;
+}
+
+/* ===== Estilos de las Imágenes ===== */
+#best-teams img,
+#others-teams img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+#best-teams img:hover,
+#others-teams img:hover {
+  transform: scale(1.05);
+}
+
+.custom-img {
+  max-width: 272px;
+  height: auto;
+}
+
+/* ===== Consultas de Medios (Responsive) ===== */
+@media (max-width: 768px) {
+  .custom-img {
+    max-width: 100%;
+  }
+}
+
+/* ===== Estilos Personalizados del Scrollbar ===== */
+div.overflow-auto::-webkit-scrollbar {
+  height: 10px;
+}
+
+div.overflow-auto::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #c49cde, #9b6ac6);
+  border-radius: 8px;
+}
+
+div.overflow-auto::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #9b6ac6, #7e4ba5);
+}
+
+div.overflow-auto::-webkit-scrollbar-track {
+  background: #e8dff5;
+  border-radius: 8px;
+}

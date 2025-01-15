@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Campeonato de Futsal: Los Mejores Equipos y Jugadores</title>
+  </head>
+  <body class="bg-primary-subtle">
+    <header>
+      <nav
+        class="navbar nav-underline navbar-expand-lg bg-primary-subtle fixed-top py-3"
+        data-bs-theme="dark"
+        aria-label="Menú principal"
+      >
+        <div class="container">
+          <a class="navbar-brand d-lg-none" href="#">
+            <i class="bi bi-trophy-fill fs-2"></i>
+          </a>
+
+          <!-- Ícono con posición absoluta para pantallas grandes -->
+          <a class="navbar-brand d-none d-lg-block position-absolute" href="#">
+            <i class="bi bi-trophy-fill fs-2"></i>
+          </a>
+          <button
+            class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center text-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item mx-2">
+                <a
+                  class="nav-link fs-5 p-1 text-uppercase text-light d-inline-block"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a
+                  class="nav-link fs-5 p-1 text-uppercase text-light d-inline-block"
+                  href="#main-team"
+                  >Equipos</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Carrusel  -->
+    <section id="carouselExampleCaptions" class="carousel slide container p-0">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="img/foto_celebracion.png"
+            class="d-block w-100"
+            alt="Celebración"
+          />
+          <div class="carousel-caption d-none d-md-block text-dark rounded-4">
+            <h5>Celebración</h5>
+            <p class="fst-italic">
+              Gran festejo por parte de los jugadores tras ganar el torneo.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/foto_estadio.png" class="d-block w-100" alt="Estadio" />
+          <div class="carousel-caption d-none d-md-block text-dark rounded-4">
+            <h5>Estadio de fútbol sala</h5>
+            <p class="fst-italic">
+              Estadio donde los jugadores se enfrentan para ganar el trofeo.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="img/foto_ganadores.png"
+            class="d-block w-100"
+            alt="Ganadores"
+          />
+          <div class="carousel-caption d-none d-md-block text-dark rounded-4">
+            <h5>Campeones</h5>
+            <p class="fst-italic">
+              El equipo azul se coronó campeón del torneo anterior.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </section>
+
+    <main class="container p-0">
+      <!-- Contenido principal -->
+      <article
+        class="my-5 mx-md-0 mx-3 row"
+        data-bs-spy="scroll"
+        data-bs-target="#list-example"
+        tabindex="0"
+        id="main-team"
+      >
+        <h1 class="text-center my-3">EQUIPOS DE FÚTBOL</h1>
+        <i class="bi bi-arrow-down text-center fs-1 mb-5 mt-3 text-primary"></i>
+
+        <div class="col-12 col-lg-10 col-xxl-10">
+          <!-- Equipos -->
+          <section id="best-teams">
+            <h2 class="p-3">Mejores Equipos</h2>
+            <div class="row g-3">
+              <!-- Equipo 1: Color rojo -->
+              <div
+                class="d-md-flex flex-md-nowrap justify-content-evenly bg-danger py-4 rounded overflow-auto text-center"
+              >
+                <img
+                  src="img/portero_team_1.png"
+                  alt="Portero"
+                  class="p-2 img-fluid"
+                  data-bs-toggle="modal"
+                  data-bs-target="#playerModal"
+                  data-bs-title="Portero"
+                  data-bs-name="Carlos García "
+                  data-bs-age="28"
+                  data-bs-goals="1"
+                  data-bs-image="img/portero_team_1.png"
+                />
+                <img
+                  src="img/jugador_1_team_1.png"
+                  alt="Jugador 1 equipo rojo"
+                  class="p-2 img-fluid"
+                  data-bs-toggle="modal"
+                  data-bs-target="#playerModal"
+                  data-bs-title="Jugador 1 equipo rojo"
+                  data-bs-name="Santiago López"
+                  data-bs-age="28"
+                  data-bs-goals="15"
+                  data-bs-image="img/jugador_1_team_1.png"
+                />
+                <img
+                  src="img/jugador_2_team_1.png"
+                  alt="Jugador 2 equipo rojo"
+                  class="p-2 img-fluid"
+                  data-bs-toggle="modal"
+                  data-bs-target="#playerModal"
+                  data-bs-title="Jugador 2 equipo rojo"
+                  data-bs-name="Miguel Pérez"
+                  data-bs-age="28"
+                  data-bs-goals="15"
+                  data-bs-image="img/jugador_2_team_1.png"
+                />
+                <img
+                  src="img/jugador_3_team_1.png"
+                  alt="Jugador 3 equipo rojo"
+                  class="p-2 img-fluid"
+                  data-bs-toggle="modal"
+                  data-bs-target="#playerModal"
+                  data-bs-title="Jugador 3 equipo rojo"
+                  data-bs-name="Fernando Rodríguez"
+                  data-bs-age="23"
+                  data-bs-goals="10"
+                  data-bs-image="img/jugador_3_team_1.png"
+                />
+                <div class="position-relative d-inline-block">
+                  <img
+                    src="img/jugador_4_team_1.png"
+                    alt="Jugador 4 equipo rojo"
+                    class="p-2 custom-img"
+                    data-bs-toggle="modal"
+                    data-bs-target="#playerModal"
+                    data-bs-title="Jugador 4 equipo rojo"
+                    data-bs-name="Juan Torres"
+                    data-bs-age="26"
+                    data-bs-goals="0"
+                    data-bs-image="img/jugador_4_team_1.png"
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-small btn-info position-absolute top-0 end-0 m-2"
+                    data-bs-toggle="popover"
+                    data-bs-title="Nuevo Jugador"
+                    data-bs-content="Es un nuevo jugador y viene del equipo azul, donde no se llevaba muy bien con su equipo. Ahora ha decidido tomar un nuevo rumbo en este deporte."
+                  >
+                    <i class="bi bi-exclamation-circle"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- Equipo 2: Color azul -->
+              <div
+                class="d-md-flex d-md-block flex-md-nowrap justify-content-evenly bg-primary py-4 rounded overflow-auto text-center"
+              >
+                <img
+                  src="img/portero_team_2.png"
+                  alt="Portero del equipo azul"
+                  class="p-2 img-fluid"
+                />
+                <img
+                  src="img/jugador_1_team_2.png"
+                  alt="Jugador 1 del equipo azul"
+                  class="p-2 img-fluid"
+                />
+                <img
+                  src="img/jugador_2_team_2.png"
+                  alt="Jugador 2 del equipo azul"
+                  class="p-2 img-fluid"
+                />
+                <img
+                  src="img/jugador_3_team_2.png"
+                  alt="Jugador 3 del equipo azul"
+                  class="p-2 img-fluid"
+                />
+                <img
+                  src="img/jugador_4_team_2.png"
+                  alt="Jugador 4 del equipo azul"
+                  class="p-2 img-fluid"
+                />
+              </div>
+            </div>
+          </section>
+          <!-- Equipos -->
+          <section id="others-teams" class="mt-5">
+            <h2 class="p-3">Otros Equipos</h2>
+            <div class="row g-3">
+              <!-- Equipo 3: Color verde -->
+              <div
+                class="d-md-flex d-md-block flex-md-nowrap justify-content-evenly bg-success py-4 rounded overflow-auto text-center"
+              >
+                <img
+                  src="img/portero_team_3.png"
+                  alt="Portero del equipo verde"
+                  class="p-2 img-fluid"
+                />
+                <img
+                  src="img/jugador_1_team_3.png"
+                  alt="Jugador 1 del equipo verde"
+                  class="p-2 img-fluid"
+                />
+                <img
+                  src="img/jugador_2_team_3.png"
+                  alt="Jugador 2 del equipo verde"
+                  class="p-2 img-fluid"
+                />
+                <img
+                  src="img/jugador_3_team_3.png"
+                  alt="Jugador 3 del equipo verde"
+                  class="p-2 img-fluid"
+                />
+                <img
+                  src="img/jugador_4_team_3.png"
+                  alt="Jugador 4 del equipo verde"
+                  class="p-2 img-fluid"
+                />
+              </div>
+
+              <!-- Equipo 4: Color blanco -->
+              <div
+                class="d-md-flex d-md-block flex-md-nowrap justify-content-evenly bg-light py-4 rounded overflow-auto text-center"
+              >
+                <img
+                  src="img/portero_team_4.png"
+                  alt="Portero del equipo blanco"
+                  class="p-2 img-fluid"
+                />
+                <img
+                  src="img/jugador_1_team_4.png"
+                  alt="Jugador 1 del equipo blanco"
+                  class="p-2 img-fluid"
+                />
+                <img
+                  src="img/jugador_2_team_4.png"
+                  alt="Jugador 2 del equipo blanco"
+                  class="p-2 img-fluid"
+                />
+                <img
+                  src="img/jugador_3_team_4.png"
+                  alt="Jugador 3 del equipo blanco"
+                  class="p-2 img-fluid"
+                />
+                <img
+                  src="img/jugador_4_team_4.png"
+                  alt="Jugador 4 del equipo blanco"
+                  class="p-2 img-fluid"
+                />
+              </div>
+
+              <!-- Equipo 5: Color negro -->
+              <div
+                class="d-md-flex d-md-block flex-md-nowrap justify-content-evenly bg-secondary py-4 rounded overflow-auto text-center"
+              >
+                <img
+                  src="img/portero_team_5.png"
+                  alt="Portero del equipo negro"
+                  class="p-2 img-fluid"
+                />
+                <img
+                  src="img/jugador_1_team_5.png"
+                  alt="Jugador 1 del equipo negro"
+                  class="p-2 img-fluid"
+                />
+                <img
+                  src="img/jugador_2_team_5.png"
+                  alt="Jugador 2 del equipo negro"
+                  class="p-2 img-fluid"
+                />
+                <img
+                  src="img/jugador_3_team_5.png"
+                  alt="Jugador 3 del equipo negro"
+                  class="p-2 img-fluid"
+                />
+                <img
+                  src="img/jugador_4_team_5.png"
+                  alt="Jugador 4 del equipo negro"
+                  class="p-2 img-fluid"
+                />
+              </div>
+            </div>
+          </section>
+
+          <!-- Boton de más información -->
+          <div id="more-info" class="text-center my-5">
+            <button
+              class="btn btn-primary btn-lg"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#staticBackdrop"
+              aria-controls="staticBackdrop"
+            >
+              Más información
+            </button>
+          </div>
+        </div>
+
+        <aside
+          class="col-lg-2 col-xxl-2 d-none d-lg-block list-navegation"
+          aria-label="Navegación lateral"
+        >
+          <h3 class="fs-5 text-center mb-3">Navegación Rápida</h3>
+          <nav
+            id="list-example"
+            class="h-100 flex-column align-items-stretch g-5"
+          >
+            <ul class="nav nav-pills flex-column">
+              <li class="nav-item">
+                <a class="nav-link mb-2" href="#best-teams">Mejores Equipos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#others-teams">Otros equipos</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+      </article>
+    </main>
+
+    <!-- Toast -->
+    <div class="toast-container position-fixed bottom-0 start-0 p-3">
+      <div
+        id="liveToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div
+          class="toast-header bg-primary-subtle text-bg-dark"
+          data-bs-theme="dark"
+        >
+          <strong class="me-auto">Nuevo integrante</strong>
+          <small>4 horas</small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">Mira el nuevo integrante del equipo rojo.</div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="playerModal"
+      tabindex="-1"
+      aria-labelledby="playerModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div
+            class="modal-header bg-primary-subtle text-light"
+            data-bs-theme="dark"
+          >
+            <h3 class="modal-title fs-5" id="playerModalLabel">model title</h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center bg-primary-subtle">
+            <!-- Imagen del jugador -->
+            <img
+              id="playerImage"
+              class="img-fluid mb-3 border border-bottom-5"
+              src="img/jugador_1_team_1.png"
+              alt="Imagen de jugador"
+            />
+            <!-- Línea divisora -->
+            <hr class="my-3 border-top border-dark border-3" />
+            <!-- Datos del jugador -->
+            <div class="mt-3">
+              <p id="playerName" class="text-start ms-3"></p>
+              <p id="playerAge" class="text-start ms-3"></p>
+              <p id="playerGoals" class="text-start ms-3"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- offCanvas -->
+    <div
+      class="offcanvas offcanvas-start bg-primary-subtle"
+      data-bs-backdrop="static"
+      tabindex="-1"
+      id="staticBackdrop"
+      aria-labelledby="staticBackdropLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title mx-auto fw-bold" id="staticBackdropLabel">
+          Más información
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          <div class="mb-4">
+            <p class="mb-1"><strong>Contacto :</strong> 5435 6789</p>
+            <p><strong>Lugar :</strong> Calle Principal 123, Ciudad</p>
+          </div>
+          <div class="d-flex justify-content-around">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              class="text-decoration-none"
+            >
+              <i class="bi bi-facebook fs-3 text-dark"></i>
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              class="text-decoration-none"
+            >
+              <i class="bi bi-twitter fs-3 text-dark"></i>
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              class="text-decoration-none"
+            >
+              <i class="bi bi-instagram fs-3 text-dark"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
